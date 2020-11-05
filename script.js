@@ -39,7 +39,7 @@ function insertNewRecord(data){
 
   cell5 = newRow.insertCell(4);
   cell5.innerHTML = `<a onClick = "onEdit(this)">Edit</a>
-                    <a>Delete</a>`;
+                    <a onClick = "onDelete(this)">Delete</a>`;
 
 }
 
@@ -63,4 +63,12 @@ function updateRecord(formData){
   selectedRow.cells[1].innerHTML = formData.empCode;
   selectedRow.cells[2].innerHTML = formData.salary;
   selectedRow.cells[3].innerHTML = formData.city;
+}
+
+function onDelete(td){
+  if(confirm('Confirm Delete')){
+    row = td.parentElement.parentElement;
+    document.getElementById('employee-list').deleteRow(row.rowIndex);
+    formReset()
+  }
 }
