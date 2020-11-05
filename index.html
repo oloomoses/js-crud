@@ -4,11 +4,61 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>Document</title>
+  <title>HTML CRUD with pure Javascript</title>
 </head>
 <body>
+  <table>
+    <tr>
+      <td>
 
-  
+        <form onsubmit="event.preventDefault(); onFormSubmit();" autocomplete="off">
+          <div>
+            <label for="name">Full Name</label>
+            <input type="text" name="fullName" id="fullName">
+          </div>
+
+          <div>
+            <label for="name">EMP Code</label>
+            <input type="text" name="empCode" id="empCode">
+          </div>
+
+          <div>
+            <label for="name">Salary</label>
+            <input type="text" name="salary" id="salary">
+          </div>
+
+          <div>
+            <label for="name">City</label>
+            <input type="text" name="city" id="city">
+          </div>
+
+          <div class="form-action-btn">
+            <input type="submit" value="Submit">
+          </div>
+
+        </form>
+      </td>
+
+
+      <td>
+
+        <table class="list" id="employee-list">
+          <tr>
+            <thead>
+              <th>Name</th>
+              <th>Employee Code</th>
+              <th>Salary</th>
+              <th>City</th>
+              <th></th>
+            </thead>
+          </tr>
+          <tbody>
+
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </table>
   <script src="script.js"></script>
 </body>
 </html>
